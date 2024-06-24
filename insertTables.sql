@@ -1,6 +1,7 @@
 use HogwartzAccounting;
 
 -- CSV INSERT
+-- mysql -u root --local-infile=1
 
 CREATE TEMPORARY TABLE mockpeople(
     person_id INT, 
