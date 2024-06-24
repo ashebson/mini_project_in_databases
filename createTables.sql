@@ -20,14 +20,14 @@ CREATE TABLE COURSE (
 CREATE TABLE STUDENT (
     person_id INT PRIMARY KEY,
     enrollment_date DATE,
-    major VARCHAR(20),
+    major VARCHAR(30),
     FOREIGN KEY (person_id) REFERENCES PERSON(person_id)
 );
 
 CREATE TABLE PROFESSOR (
     person_id INT PRIMARY KEY,
     hire_date DATE,
-    department VARCHAR(20),
+    department VARCHAR(30),
     FOREIGN KEY (person_id) REFERENCES PERSON(person_id)
 );
 
