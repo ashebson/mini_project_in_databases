@@ -18,45 +18,43 @@ CREATE TABLE COURSE (
 );
 
 CREATE TABLE STUDENT (
-    student_id INT PRIMARY KEY,
-    person_id INT,
-    student_number VARCHAR(20),
+    person_id INT PRIMARY KEY,
     enrollment_date DATE,
+    major VARCHAR(20),
     FOREIGN KEY (person_id) REFERENCES PERSON(person_id)
 );
 
 CREATE TABLE PROFESSOR (
-    professor_id INT PRIMARY KEY,
-    person_id INT,
-    employee_number VARCHAR(20),
+    person_id INT PRIMARY KEY,
     hire_date DATE,
-    salary DECIMAL(10, 2),
+    department VARCHAR(20),
     FOREIGN KEY (person_id) REFERENCES PERSON(person_id)
 );
 
 CREATE TABLE STUDENT_COURSE (
-    student_course_id INT PRIMARY KEY,
     student_id INT,
     course_id INT,
     signup_date DATE,
-    FOREIGN KEY (student_id) REFERENCES STUDENT(student_id),
-    FOREIGN KEY (course_id) REFERENCES COURSE(course_id)
+    FOREIGN KEY (student_id) REFERENCES STUDENT(person_id),
+    FOREIGN KEY (course_id) REFERENCES COURSE(course_id),
+    PRIMARY KEY (student_id, course_id)
 );
 
 CREATE TABLE BANK_TRANSFER (
     transfer_id INT PRIMARY KEY,
-    bank_account VARCHAR(20),
+    person_id INT,
     amount DECIMAL(10, 2),
     transfer_date DATE,
     description VARCHAR(255),
-    is_from_university BOOLEAN
+    outgoing BOOLEAN,
+    FOREIGN KEY (person_id) REFERENCES PERSON(person_id)
 );
 
 CREATE TABLE PROFESSOR_COURSE (
-    professor_course_id INT PRIMARY KEY,
     professor_id INT,
     course_id INT,
     weekly_hours INT,
-    FOREIGN KEY (professor_id) REFERENCES PROFESSOR(professor_id),
-    FOREIGN KEY (course_id) REFERENCES COURSE(course_id)
+    FOREIGN KEY (professor_id) REFERENCES PROFESSOR(person_id),
+    FOREIGN KEY (course_id) REFERENCES COURSE(course_id),
+    PRIMARY KEY (professor_id, course_id)
 );

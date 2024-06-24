@@ -15,22 +15,17 @@ erDiagram
         string last_name
         date date_of_birth
         string bank_account
-        string national_id`
+        string national_id
     }
     
     STUDENT {
-        int student_id PK
-        int person_id FK
-        string student_number
+        int person_id PK, FK
         date enrollment_date
     }
     
     PROFESSOR {
-        int professor_id PK
-        int person_id FK
-        string employee_number
+        int person_id PK, FK
         date hire_date
-        float salary
     }
     
     STUDENT_COURSE {
