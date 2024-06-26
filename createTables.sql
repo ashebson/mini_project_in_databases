@@ -1,4 +1,3 @@
-CREATE DATABASE HogwartzAccounting;
 use HogwartzAccounting;
 
 CREATE TABLE PERSON (
