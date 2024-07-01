@@ -10,5 +10,4 @@ select * from STUDENT_COURSE;
 
 select * from BANK_TRANSFER;
 
-
 select * from PROFESSOR_COURSE;

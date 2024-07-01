@@ -1,5 +1,3 @@
-
-
 ```mermaid
 erDiagram
     COURSE {
@@ -21,11 +19,13 @@ erDiagram
     STUDENT {
         int person_id PK, FK
         date enrollment_date
+        string major
     }
     
     PROFESSOR {
         int person_id PK, FK
         date hire_date
+        string department
     }
     
     STUDENT_COURSE {
@@ -57,3 +57,7 @@ erDiagram
     COURSE ||--o{ PROFESSOR_COURSE: includes
     PROFESSOR ||--o{ PROFESSOR_COURSE: teaches
 ```
+
+
+
+
