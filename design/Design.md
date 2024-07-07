@@ -57,7 +57,3 @@ erDiagram
     COURSE ||--o{ PROFESSOR_COURSE: includes
     PROFESSOR ||--o{ PROFESSOR_COURSE: teaches
 ```
-
-
-
-
