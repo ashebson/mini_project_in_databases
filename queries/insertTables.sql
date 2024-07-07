@@ -410,7 +410,7 @@ insert into BANK_TRANSFER (transfer_id, person_id, amount, transfer_date, descri
 # Insert `COURSE`
 */
 
-insert into COURSE (course_id, course_name, course_cost, professor_pay) values
+INSERT INTO COURSE (course_id, course_name, course_cost, professor_pay) values
 (1, 'General Manager', 242.17, 735.24),
 (2, 'Safety Technician I', 721.11, 845.2),
 (3, 'Office Assistant III', 600.28, 563.42),

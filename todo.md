@@ -1,0 +1,5 @@
+- [ ] DSD
+- [ ] fix python inserts
+- [ ] backup
+- [ ] refactor folder names
+- [ ] refactor readme (according to specifications)
