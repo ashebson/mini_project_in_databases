@@ -40,7 +40,7 @@ erDiagram
         float amount
         date transfer_date
         string description
-        boolean incoming
+        boolean outgoing
     }
     
     PROFESSOR_COURSE {
