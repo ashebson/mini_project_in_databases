@@ -411,11 +411,7 @@ insert into BANK_TRANSFER (transfer_id, person_id, amount, transfer_date, descri
 */
 
 INSERT INTO
-    COURSE (
-        course_id,
-        course_name,
-        course_cost,
-        professor_pay
+    COURSE (course_id,course_name,course_cost,professor_pay
     )
 VALUES
     (1, 'Alchemy Basics', 138.6, 105.45),
@@ -467,24 +463,14 @@ VALUES
     (47, 'Magical Archaeology', 182.95, 118.65),
     (48, 'Magical Cryptozoology', 105.77, 112.89),
     (49, 'Magical Artifacts', 53.43, 85.85),
-    (
-        50,
-        'Introduction to Spell Theory',
-        146.99,
-        117.38
-    ),
+    (50,'Introduction to Spell Theory',146.99,117.38),
     (51, 'Advanced Spell Theory', 132.48, 139.85),
     (52, 'Basic Potion Brewing', 121.08, 77.88),
     (53, 'Advanced Potion Brewing', 139.92, 65.34),
     (54, 'Magical Genetics', 155.28, 107.39),
     (55, 'Magical Biotechnology', 156.15, 130.52),
     (56, 'Magical Engineering', 194.81, 47.05),
-    (
-        57,
-        'Introduction to Magical Artifacts',
-        61.06,
-        108.31
-    ),
+    (57,'Introduction to Magical Artifacts',61.06,108.31),
     (58, 'Advanced Magical Artifacts', 130.35, 145.17),
     (59, 'Magical Architecture', 67.29, 95.23),
     (60, 'Magical Urban Planning', 151.46, 30.9),
@@ -538,19 +524,9 @@ VALUES
     (108, 'Advanced Wizard Economics', 189.21, 110.45),
     (109, 'Wizard Microeconomics', 134.37, 61.24),
     (110, 'Wizard Macroeconomics', 157.35, 43.79),
-    (
-        111,
-        'Wizard Development Economics',
-        188.26,
-        60.09
-    ),
+    (111,'Wizard Development Economics',188.26,60.09),
     (112, 'Wizard Public Finance', 59.03, 34.17),
-    (
-        113,
-        'Wizard International Economics',
-        162.17,
-        44.16
-    ),
+    (113,'Wizard International Economics',162.17,44.16),
     (114, 'Wizard Political Economy', 118.68, 52.82),
     (115, 'Wizard Monetary Policy', 136.39, 37.54),
     (116, 'Wizard Fiscal Policy', 180.32, 80.36),
@@ -565,90 +541,40 @@ VALUES
     (125, 'Wizard Management Accounting', 109.95, 99.0),
     (126, 'Wizard Budgeting', 181.09, 100.64),
     (127, 'Wizard Strategic Management', 165.62, 86.21),
-    (
-        128,
-        'Wizard Operations Management',
-        158.21,
-        141.22
-    ),
-    (
-        129,
-        'Wizard Human Resource Management',
-        195.15,
-        30.33
-    ),
+    (128,'Wizard Operations Management',158.21,141.22),
+    (129,'Wizard Human Resource Management',195.15,30.33),
     (130, 'Wizard Marketing', 67.7, 72.96),
     (131, 'Wizard Sales', 92.94, 112.19),
     (132, 'Wizard Public Relations', 187.37, 83.96),
     (133, 'Wizard Customer Service', 170.8, 148.63),
     (134, 'Wizard Retail Management', 73.0, 105.25),
-    (
-        135,
-        'Wizard Supply Chain Management',
-        188.52,
-        53.07
-    ),
+    (135,'Wizard Supply Chain Management',188.52,53.07),
     (136, 'Wizard Logistics', 78.94, 45.95),
     (137, 'Wizard Entrepreneurship', 163.55, 83.01),
-    (
-        138,
-        'Wizard Innovation Management',
-        173.19,
-        129.18
-    ),
+    (138,'Wizard Innovation Management',173.19,129.18),
     (139, 'Wizard Project Management', 199.43, 105.62),
     (140, 'Wizard Leadership', 150.26, 86.42),
-    (
-        141,
-        'Wizard Organizational Behavior',
-        92.66,
-        83.06
-    ),
+    (141,'Wizard Organizational Behavior',92.66,83.06),
     (142, 'Wizard Negotiation Skills', 168.71, 48.23),
     (143, 'Wizard Conflict Management', 185.41, 50.75),
     (144, 'Wizard Change Management', 132.38, 61.08),
-    (
-        145,
-        'Wizard Corporate Social Responsibility',
-        92.75,
-        79.25
-    ),
+    (145,'Wizard Corporate Social Responsibility',92.75,79.25),
     (146, 'Wizard Business Ethics', 194.21, 104.37),
     (147, 'Wizard Strategic Planning', 103.29, 119.94),
-    (
-        148,
-        'Wizard Performance Management',
-        103.74,
-        114.82
-    ),
+    (148,'Wizard Performance Management',103.74,114.82),
     (149, 'Wizard Risk Management', 54.98, 74.78),
     (150, 'Wizard Decision Making', 126.81, 127.09),
     (151, 'Wizard Problem Solving', 178.44, 99.92),
     (152, 'Wizard Critical Thinking', 190.5, 107.85),
     (153, 'Wizard Creative Thinking', 193.98, 50.74),
     (154, 'Wizard Analytical Skills', 139.51, 36.24),
-    (
-        155,
-        'Wizard Emotional Intelligence',
-        51.98,
-        93.93
-    ),
+    (155,'Wizard Emotional Intelligence',51.98,93.93),
     (156, 'Wizard Time Management', 85.19, 84.01),
     (157, 'Wizard Stress Management', 108.65, 66.33),
     (158, 'Wizard Work-Life Balance', 184.66, 59.49),
-    (
-        159,
-        'Wizard Personal Development',
-        142.15,
-        141.21
-    ),
+    (159,'Wizard Personal Development',142.15,141.21),
     (160, 'Wizard Career Planning', 92.21, 139.1),
-    (
-        161,
-        'Wizard Communication Skills',
-        192.18,
-        127.47
-    ),
+    (161,'Wizard Communication Skills',192.18,127.47),
     (162, 'Wizard Presentation Skills', 88.01, 133.0),
     (163, 'Wizard Writing Skills', 54.71, 95.59),
     (164, 'Wizard Reading Skills', 58.0, 148.27),
@@ -662,42 +588,17 @@ VALUES
     (172, 'Wizard Team Building', 76.83, 126.46),
     (173, 'Wizard Collaboration', 108.68, 68.51),
     (174, 'Wizard Networking', 137.38, 133.92),
-    (
-        175,
-        'Wizard Diversity and Inclusion',
-        69.75,
-        83.74
-    ),
+    (175,'Wizard Diversity and Inclusion',69.75,83.74),
     (176, 'Wizard Workplace Wellbeing', 172.49, 105.79),
     (177, 'Wizard Job Satisfaction', 177.92, 62.75),
     (178, 'Wizard Employee Engagement', 158.12, 56.61),
     (179, 'Wizard Talent Management', 77.92, 80.19),
-    (
-        180,
-        'Wizard Learning and Development',
-        181.18,
-        49.99
-    ),
+    (180,'Wizard Learning and Development',181.18,49.99),
     (181, 'Wizard Succession Planning', 157.98, 147.4),
-    (
-        182,
-        'Wizard Performance Appraisal',
-        165.89,
-        76.86
-    ),
+    (182,'Wizard Performance Appraisal',165.89,76.86),
     (183, 'Wizard Employee Relations', 125.81, 75.7),
-    (
-        184,
-        'Wizard Compensation and Benefits',
-        161.06,
-        73.41
-    ),
-    (
-        185,
-        'Wizard Recruitment and Selection',
-        55.47,
-        79.81
-    ),
+    (184,'Wizard Compensation and Benefits',161.06,73.41),
+    (185,'Wizard Recruitment and Selection',55.47,79.81),
     (186, 'Wizard Onboarding', 93.72, 72.86),
     (187, 'Wizard Retention', 142.43, 134.62),
     (188, 'Wizard Termination', 168.24, 31.42),
@@ -707,122 +608,37 @@ VALUES
     (192, 'Wizard Harassment', 133.1, 99.08),
     (193, 'Wizard Bullying', 182.79, 79.64),
     (194, 'Wizard Grievances', 66.29, 143.08),
-    (
-        195,
-        'Wizard Disciplinary Procedures',
-        98.77,
-        42.14
-    ),
+    (195,'Wizard Disciplinary Procedures',98.77,42.14),
     (196, 'Wizard Ethical Leadership', 150.58, 30.99),
-    (
-        197,
-        'Wizard Responsible Leadership',
-        78.61,
-        118.49
-    ),
+    (197,'Wizard Responsible Leadership',78.61,118.49),
     (198, 'Wizard Servant Leadership', 162.94, 80.92),
-    (
-        199,
-        'Wizard Transformational Leadership',
-        138.56,
-        135.62
-    ),
-    (
-        200,
-        'Wizard Transactional Leadership',
-        159.89,
-        46.47
-    ),
-    (
-        201,
-        'Wizard Charismatic Leadership',
-        117.7,
-        36.86
-    ),
-    (
-        202,
-        'Wizard Situational Leadership',
-        97.64,
-        63.06
-    ),
+    (199,'Wizard Transformational Leadership',138.56,135.62),
+    (200,'Wizard Transactional Leadership',159.89,46.47),
+    (201,'Wizard Charismatic Leadership',117.7,36.86),
+    (202,'Wizard Situational Leadership',97.64,63.06),
     (203, 'Wizard Team Leadership', 99.87, 97.9),
     (204, 'Wizard Strategic Leadership', 82.57, 45.13),
     (205, 'Wizard Visionary Leadership', 64.12, 46.25),
     (206, 'Wizard Coaching Leadership', 114.4, 63.43),
-    (
-        207,
-        'Wizard Democratic Leadership',
-        198.79,
-        52.72
-    ),
-    (
-        208,
-        'Wizard Autocratic Leadership',
-        175.28,
-        99.11
-    ),
-    (
-        209,
-        'Wizard Laissez-faire Leadership',
-        86.39,
-        39.41
-    ),
-    (
-        210,
-        'Wizard Paternalistic Leadership',
-        139.37,
-        143.0
-    ),
-    (
-        211,
-        'Wizard Participative Leadership',
-        65.25,
-        145.51
-    ),
+    (207,'Wizard Democratic Leadership',198.79,52.72),
+    (208,'Wizard Autocratic Leadership',175.28,99.11),
+    (209,'Wizard Laissez-faire Leadership',86.39,39.41),
+    (210,'Wizard Paternalistic Leadership',139.37,143.0),
+    (211,'Wizard Participative Leadership',65.25,145.51),
     (212, 'Wizard Directive Leadership', 135.0, 68.33),
-    (
-        213,
-        'Wizard Supportive Leadership',
-        176.34,
-        110.63
-    ),
-    (
-        214,
-        'Wizard Achievement-oriented Leadership',
-        127.62,
-        137.84
-    ),
+    (213,'Wizard Supportive Leadership',176.34,110.63),
+    (214,'Wizard Achievement-oriented Leadership',127.62,137.84),
     (215, 'Wizard Adaptive Leadership', 117.03, 54.16),
-    (
-        216,
-        'Wizard Entrepreneurial Leadership',
-        177.85,
-        34.42
-    ),
+    (216,'Wizard Entrepreneurial Leadership',177.85,34.42),
     (217, 'Wizard Crisis Leadership', 134.7, 120.57),
     (218, 'Wizard Political Leadership', 168.68, 47.73),
     (219, 'Wizard Military Leadership', 177.08, 64.2),
-    (
-        220,
-        'Wizard Educational Leadership',
-        176.82,
-        140.01
-    ),
+    (220,'Wizard Educational Leadership',176.82,140.01),
     (221, 'Wizard Artistic Leadership', 70.0, 40.16),
     (222, 'Wizard Athletic Leadership', 97.55, 145.4),
     (223, 'Wizard Scientific Leadership', 88.6, 131.23),
-    (
-        224,
-        'Wizard Technological Leadership',
-        128.65,
-        126.87
-    ),
-    (
-        225,
-        'Wizard Environmental Leadership',
-        88.05,
-        88.98
-    ),
+    (224,'Wizard Technological Leadership',128.65,126.87),
+    (225,'Wizard Environmental Leadership',88.05,88.98),
     (226, 'Wizard Medical Leadership', 162.72, 38.82),
     (227, 'Wizard Legal Leadership', 182.9, 75.1),
     (228, 'Wizard Financial Leadership', 155.04, 97.55),
@@ -830,412 +646,92 @@ VALUES
     (230, 'Wizard Social Leadership', 56.33, 77.46),
     (231, 'Wizard Cultural Leadership', 53.64, 83.0),
     (232, 'Wizard Religious Leadership', 184.6, 86.02),
-    (
-        233,
-        'Wizard Philosophical Leadership',
-        176.7,
-        139.04
-    ),
-    (
-        234,
-        'Wizard Psychological Leadership',
-        88.15,
-        54.87
-    ),
-    (
-        235,
-        'Wizard Historical Leadership',
-        139.75,
-        88.86
-    ),
+    (233,'Wizard Philosophical Leadership',176.7,139.04),
+    (234,'Wizard Psychological Leadership',88.15,54.87),
+    (235,'Wizard Historical Leadership',139.75,88.86),
     (236, 'Wizard Literary Leadership', 101.37, 67.55),
     (237, 'Wizard Musical Leadership', 108.22, 109.85),
     (238, 'Wizard Theatrical Leadership', 189.45, 56.1),
     (239, 'Wizard Cinematic Leadership', 55.33, 94.45),
     (240, 'Wizard Dance Leadership', 86.81, 123.31),
-    (
-        241,
-        'Wizard Visual Arts Leadership',
-        124.84,
-        128.23
-    ),
-    (
-        242,
-        'Wizard Digital Arts Leadership',
-        118.13,
-        128.27
-    ),
+    (241,'Wizard Visual Arts Leadership',124.84,128.23),
+    (242,'Wizard Digital Arts Leadership',118.13,128.27),
     (243, 'Wizard Culinary Leadership', 135.79, 144.18),
     (244, 'Wizard Fashion Leadership', 183.55, 56.29),
-    (
-        245,
-        'Wizard Architectural Leadership',
-        150.47,
-        37.78
-    ),
-    (
-        246,
-        'Wizard Engineering Leadership',
-        120.26,
-        34.18
-    ),
-    (
-        247,
-        'Wizard Astronomical Leadership',
-        104.3,
-        106.16
-    ),
+    (245,'Wizard Architectural Leadership',150.47,37.78),
+    (246,'Wizard Engineering Leadership',120.26,34.18),
+    (247,'Wizard Astronomical Leadership',104.3,106.16),
     (248, 'Wizard Biological Leadership', 65.22, 83.18),
     (249, 'Wizard Chemical Leadership', 175.53, 115.5),
     (250, 'Wizard Physical Leadership', 61.67, 80.7),
-    (
-        251,
-        'Wizard Mathematical Leadership',
-        146.55,
-        133.22
-    ),
-    (
-        252,
-        'Wizard Computational Leadership',
-        93.37,
-        89.2
-    ),
+    (251,'Wizard Mathematical Leadership',146.55,133.22),
+    (252,'Wizard Computational Leadership',93.37,89.2),
     (253, 'Wizard Statistical Leadership', 61.93, 68.7),
     (254, 'Wizard Geological Leadership', 69.58, 64.3),
-    (
-        255,
-        'Wizard Meteorological Leadership',
-        152.37,
-        148.39
-    ),
-    (
-        256,
-        'Wizard Oceanographic Leadership',
-        163.96,
-        97.93
-    ),
-    (
-        257,
-        'Wizard Ecological Leadership',
-        188.47,
-        37.03
-    ),
-    (
-        258,
-        'Wizard Environmental Sciences Leadership',
-        57.55,
-        96.37
-    ),
-    (
-        259,
-        'Wizard Planetary Sciences Leadership',
-        161.87,
-        145.4
-    ),
-    (
-        260,
-        'Wizard Space Sciences Leadership',
-        98.95,
-        93.71
-    ),
-    (
-        261,
-        'Wizard Health Sciences Leadership',
-        105.77,
-        64.68
-    ),
-    (
-        262,
-        'Wizard Behavioral Sciences Leadership',
-        172.3,
-        77.38
-    ),
-    (
-        263,
-        'Wizard Social Sciences Leadership',
-        72.49,
-        69.45
-    ),
-    (
-        264,
-        'Wizard Humanities Leadership',
-        82.44,
-        104.78
-    ),
+    (255,'Wizard Meteorological Leadership',152.37,148.39),
+    (256,'Wizard Oceanographic Leadership',163.96,97.93),
+    (257,'Wizard Ecological Leadership',188.47,37.03),
+    (258,'Wizard Environmental Sciences Leadership',57.55,96.37),
+    (259,'Wizard Planetary Sciences Leadership',161.87,145.4),
+    (260,'Wizard Space Sciences Leadership',98.95,93.71),
+    (261,'Wizard Health Sciences Leadership',105.77,64.68),
+    (262,'Wizard Behavioral Sciences Leadership',172.3,77.38),
+    (263,'Wizard Social Sciences Leadership',72.49,69.45),
+    (264,'Wizard Humanities Leadership',82.44,104.78),
     (265, 'Wizard Arts Leadership', 125.0, 119.01),
     (266, 'Wizard Business Leadership', 70.53, 110.88),
-    (
-        267,
-        'Wizard Communication Leadership',
-        120.16,
-        68.82
-    ),
+    (267,'Wizard Communication Leadership',120.16,68.82),
     (268, 'Wizard Education Leadership', 76.61, 79.61),
     (269, 'Wizard Law Leadership', 114.29, 119.67),
     (270, 'Wizard Medicine Leadership', 80.39, 110.9),
-    (
-        271,
-        'Wizard Military Sciences Leadership',
-        124.37,
-        103.3
-    ),
-    (
-        272,
-        'Wizard Public Administration Leadership',
-        66.03,
-        136.31
-    ),
+    (271,'Wizard Military Sciences Leadership',124.37,103.3),
+    (272,'Wizard Public Administration Leadership',66.03,136.31),
     (273, 'Wizard Recreation Leadership', 52.02, 89.48),
     (274, 'Wizard Theology Leadership', 194.97, 53.73),
-    (
-        275,
-        'Wizard Philosophy Leadership',
-        103.62,
-        129.65
-    ),
-    (
-        276,
-        'Wizard Linguistics Leadership',
-        149.94,
-        33.28
-    ),
-    (
-        277,
-        'Wizard Literary Studies Leadership',
-        189.54,
-        47.15
-    ),
-    (
-        278,
-        'Wizard Cultural Studies Leadership',
-        96.54,
-        73.27
-    ),
-    (
-        279,
-        'Wizard Gender Studies Leadership',
-        176.31,
-        50.43
-    ),
-    (
-        280,
-        'Wizard Ethnic Studies Leadership',
-        149.13,
-        113.98
-    ),
-    (
-        281,
-        'Wizard Disability Studies Leadership',
-        74.08,
-        56.96
-    ),
-    (
-        282,
-        'Wizard Postcolonial Studies Leadership',
-        151.89,
-        93.66
-    ),
-    (
-        283,
-        'Wizard Urban Studies Leadership',
-        67.57,
-        105.46
-    ),
-    (
-        284,
-        'Wizard Rural Studies Leadership',
-        170.24,
-        147.14
-    ),
-    (
-        285,
-        'Wizard Regional Studies Leadership',
-        74.37,
-        37.65
-    ),
-    (
-        286,
-        'Wizard Global Studies Leadership',
-        119.99,
-        86.56
-    ),
-    (
-        287,
-        'Wizard International Studies Leadership',
-        143.75,
-        71.01
-    ),
-    (
-        288,
-        'Wizard Area Studies Leadership',
-        142.31,
-        104.91
-    ),
-    (
-        289,
-        'Wizard Media Studies Leadership',
-        82.57,
-        103.93
-    ),
-    (
-        290,
-        'Wizard Film Studies Leadership',
-        118.79,
-        81.46
-    ),
-    (
-        291,
-        'Wizard Art History Leadership',
-        111.74,
-        119.71
-    ),
-    (
-        292,
-        'Wizard Musicology Leadership',
-        130.02,
-        83.32
-    ),
-    (
-        293,
-        'Wizard Theatre Studies Leadership',
-        127.34,
-        130.24
-    ),
-    (
-        294,
-        'Wizard Dance Studies Leadership',
-        155.08,
-        68.47
-    ),
-    (
-        295,
-        'Wizard Fashion Studies Leadership',
-        72.86,
-        108.06
-    ),
-    (
-        296,
-        'Wizard Food Studies Leadership',
-        72.9,
-        85.16
-    ),
-    (
-        297,
-        'Wizard Sports Studies Leadership',
-        113.31,
-        118.96
-    ),
-    (
-        298,
-        'Wizard Tourism Studies Leadership',
-        197.45,
-        47.68
-    ),
-    (
-        299,
-        'Wizard Leisure Studies Leadership',
-        90.17,
-        36.69
-    ),
-    (
-        300,
-        'Wizard Museum Studies Leadership',
-        62.62,
-        115.8
-    ),
-    (
-        301,
-        'Wizard Heritage Studies Leadership',
-        186.34,
-        77.92
-    ),
-    (
-        302,
-        'Wizard Library Studies Leadership',
-        131.43,
-        99.06
-    ),
-    (
-        303,
-        'Wizard Information Studies Leadership',
-        99.44,
-        114.23
-    ),
-    (
-        304,
-        'Wizard Archival Studies Leadership',
-        172.99,
-        144.85
-    ),
-    (
-        305,
-        'Wizard Communication Studies Leadership',
-        128.62,
-        69.8
-    ),
-    (
-        306,
-        'Wizard Journalism Leadership',
-        76.08,
-        104.33
-    ),
-    (
-        307,
-        'Wizard Public Relations Leadership',
-        58.24,
-        113.67
-    ),
-    (
-        308,
-        'Wizard Advertising Leadership',
-        180.87,
-        49.27
-    ),
+    (275,'Wizard Philosophy Leadership',103.62,129.65),
+    (276,'Wizard Linguistics Leadership',149.94,33.28),
+    (277,'Wizard Literary Studies Leadership',189.54,47.15),
+    (278,'Wizard Cultural Studies Leadership',96.54,73.27),
+    (279,'Wizard Gender Studies Leadership',176.31,50.43),
+    (280,'Wizard Ethnic Studies Leadership',149.13,113.98),
+    (281,'Wizard Disability Studies Leadership',74.08,56.96),
+    (282,'Wizard Postcolonial Studies Leadership',151.89,93.66),
+    (283,'Wizard Urban Studies Leadership',67.57,105.46),
+    (284,'Wizard Rural Studies Leadership',170.24,147.14),
+    (285,'Wizard Regional Studies Leadership',74.37,37.65),
+    (286,'Wizard Global Studies Leadership',119.99,86.56),
+    (287,'Wizard International Studies Leadership',143.75,71.01),
+    (288,'Wizard Area Studies Leadership',142.31,104.91),
+    (289,'Wizard Media Studies Leadership',82.57,103.93),
+    (290,'Wizard Film Studies Leadership',118.79,81.46),
+    (291,'Wizard Art History Leadership',111.74,119.71),
+    (292,'Wizard Musicology Leadership',130.02,83.32),
+    (293,'Wizard Theatre Studies Leadership',127.34,130.24),
+    (294,'Wizard Dance Studies Leadership',155.08,68.47),
+    (295,'Wizard Fashion Studies Leadership',72.86,108.06),
+    (296,'Wizard Food Studies Leadership',72.9,85.16),
+    (297,'Wizard Sports Studies Leadership',113.31,118.96),
+    (298,'Wizard Tourism Studies Leadership',197.45,47.68),
+    (299,'Wizard Leisure Studies Leadership',90.17,36.69),
+    (300,'Wizard Museum Studies Leadership',62.62,115.8),
+    (301,'Wizard Heritage Studies Leadership',186.34,77.92),
+    (302,'Wizard Library Studies Leadership',131.43,99.06),
+    (303,'Wizard Information Studies Leadership',99.44,114.23),
+    (304,'Wizard Archival Studies Leadership',172.99,144.85),
+    (305,'Wizard Communication Studies Leadership',128.62,69.8),
+    (306,'Wizard Journalism Leadership',76.08,104.33),
+    (307,'Wizard Public Relations Leadership',58.24,113.67),
+    (308,'Wizard Advertising Leadership',180.87,49.27),
     (309, 'Wizard Marketing Leadership', 111.06, 77.1),
     (310, 'Wizard Sales Leadership', 149.36, 70.86),
     (311, 'Wizard Hospitality Leadership', 61.91, 36.8),
-    (
-        312,
-        'Wizard Event Management Leadership',
-        130.86,
-        33.59
-    ),
-    (
-        313,
-        'Wizard Real Estate Leadership',
-        184.05,
-        124.24
-    ),
-    (
-        314,
-        'Wizard Retail Management Leadership',
-        125.2,
-        87.33
-    ),
-    (
-        315,
-        'Wizard Wholesale Management Leadership',
-        156.61,
-        135.88
-    ),
-    (
-        316,
-        'Wizard Logistics Management Leadership',
-        97.57,
-        95.73
-    ),
-    (
-        317,
-        'Wizard Supply Chain Management Leadership',
-        83.93,
-        83.38
-    ),
-    (
-        318,
-        'Wizard Transportation Leadership',
-        121.34,
-        66.74
-    ),
+    (312,'Wizard Event Management Leadership',130.86,33.59),
+    (313,'Wizard Real Estate Leadership',184.05,124.24),
+    (314,'Wizard Retail Management Leadership',125.2,87.33),
+    (315,'Wizard Wholesale Management Leadership',156.61,135.88),
+    (316,'Wizard Logistics Management Leadership',97.57,95.73),
+    (317,'Wizard Supply Chain Management Leadership',83.93,83.38),
+    (318,'Wizard Transportation Leadership',121.34,66.74),
     (319, 'Magical Energy Studies', 58.79, 116.29),
     (320, 'Advanced Magical Theory', 52.11, 98.22),
     (321, 'Basic Magical Ethics', 70.28, 98.52),
@@ -1261,87 +757,37 @@ VALUES
     (341, 'Magical Weaponry', 193.5, 39.65),
     (342, 'Advanced Magical Weaponry', 142.43, 83.49),
     (343, 'Magical Forensics', 121.58, 148.67),
-    (
-        344,
-        'Magical Investigation Techniques',
-        134.26,
-        142.76
-    ),
+    (344,'Magical Investigation Techniques',134.26,142.76),
     (345, 'Illusion Magic', 165.22, 125.6),
     (346, 'Advanced Illusion Magic', 192.87, 42.09),
     (347, 'Dark Arts Defense', 171.84, 111.18),
-    (
-        348,
-        'Magical Intelligence Gathering',
-        159.22,
-        33.75
-    ),
+    (348,'Magical Intelligence Gathering',159.22,33.75),
     (349, 'Magical Camouflage', 197.38, 123.09),
     (350, 'Magical Surveillance', 148.82, 98.73),
     (351, 'Non-verbal Spells', 62.88, 81.68),
     (352, 'Advanced Non-verbal Spells', 53.83, 127.15),
     (353, 'Magical Encryption', 141.95, 116.23),
-    (
-        354,
-        'Introduction to Magical Warfare',
-        167.3,
-        140.55
-    ),
+    (354,'Introduction to Magical Warfare',167.3,140.55),
     (355, 'Advanced Magical Warfare', 120.88, 83.38),
     (356, 'Healing Herbology', 74.26, 52.93),
     (357, 'Potions for Healing', 127.08, 127.71),
     (358, 'Spell Invention', 157.07, 113.38),
     (359, 'Magical Contract Law', 184.42, 118.34),
-    (
-        360,
-        'Magical Intellectual Property',
-        52.97,
-        117.68
-    ),
+    (360,'Magical Intellectual Property',52.97,117.68),
     (361, 'Magical Urban Legends', 92.52, 77.81),
     (362, 'Comparative Magical Studies', 126.62, 45.33),
     (363, 'Magical Ethics and Society', 97.06, 63.21),
-    (
-        364,
-        'History of Magical Rebellion',
-        147.27,
-        94.84
-    ),
-    (
-        365,
-        'History of Wizard-Muggle Relations',
-        60.65,
-        113.35
-    ),
+    (364,'History of Magical Rebellion',147.27,94.84),
+    (365,'History of Wizard-Muggle Relations',60.65,113.35),
     (366, 'Advanced Charms', 80.64, 148.12),
     (367, 'Advanced Hexes', 71.9, 78.04),
     (368, 'Advanced Jinxes', 161.84, 39.16),
     (369, 'Wandless Magic', 174.76, 126.87),
-    (
-        370,
-        'Introduction to Magical Creatures',
-        142.22,
-        116.42
-    ),
+    (370,'Introduction to Magical Creatures',142.22,116.42),
     (371, 'Advanced Magical Creatures', 142.29, 89.16),
-    (
-        372,
-        'Dangerous Magical Creatures',
-        101.98,
-        127.57
-    ),
-    (
-        373,
-        'Magical Creature Conservation',
-        95.62,
-        67.21
-    ),
-    (
-        374,
-        'Magical Animal Communication',
-        132.46,
-        88.73
-    ),
+    (372,'Dangerous Magical Creatures',101.98,127.57),
+    (373,'Magical Creature Conservation',95.62,67.21),
+    (374,'Magical Animal Communication',132.46,88.73),
     (375, 'Healing Spells for Animals', 179.83, 71.88),
     (376, 'Elemental Magic', 140.6, 32.35),
     (377, 'Advanced Elemental Magic', 199.82, 58.06),
@@ -1350,37 +796,17 @@ VALUES
     (380, 'Magical Botany', 122.32, 65.95),
     (381, 'Herbological Medicine', 56.45, 40.5),
     (382, 'Advanced Enchantments', 175.94, 139.37),
-    (
-        383,
-        'Ancient Magical Civilizations',
-        193.57,
-        50.37
-    ),
+    (383,'Ancient Magical Civilizations',193.57,50.37),
     (384, 'Ancient Wizarding Warfare', 181.05, 111.54),
     (385, 'Protective Charms', 87.78, 81.33),
     (386, 'Household Charms', 91.0, 42.89),
-    (
-        387,
-        'Magical Artifacts Restoration',
-        101.65,
-        121.2
-    ),
+    (387,'Magical Artifacts Restoration',101.65,121.2),
     (388, 'Magical Languages', 152.91, 140.53),
     (389, 'Spell Linguistics', 72.12, 56.39),
     (390, 'Advanced Spell Linguistics', 135.25, 78.19),
     (391, 'Spellbook Creation', 140.3, 41.14),
-    (
-        392,
-        'Magical Manuscript Preservation',
-        180.44,
-        63.61
-    ),
-    (
-        393,
-        'Advanced Divination Techniques',
-        63.32,
-        145.94
-    ),
+    (392,'Magical Manuscript Preservation',180.44,63.61),
+    (393,'Advanced Divination Techniques',63.32,145.94),
     (394, 'Magical Mind Reading', 151.22, 109.87),
     (395, 'Telepathy and Telekinesis', 188.14, 41.12),
     (396, 'Advanced Telekinesis', 99.9, 87.93),
