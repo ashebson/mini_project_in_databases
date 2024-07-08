@@ -2,7 +2,12 @@
 # MySQL Functions
 */
 
+/*markdown
+## Get Person's Transfer Deviance
+*/
+
 DROP FUNCTION IF EXISTS get_transfer_stddev;
+
 CREATE FUNCTION get_transfer_stddev(pid INT) 
 RETURNS FLOAT
 DETERMINISTIC
