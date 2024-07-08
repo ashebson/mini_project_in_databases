@@ -4,7 +4,6 @@
 - [ ] backup
 - [ ] refactor folder names
 - [ ] refactor readme (according to specifications)
-- [ ] fix duplicate course names
 
 # Stage 2
 
