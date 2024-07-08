@@ -1,6 +1,5 @@
 # Stage 1
 
-- [ ] DSD
 - [ ] fix python inserts
 - [ ] backup
 - [ ] refactor folder names

@@ -1,0 +1,48 @@
+Table PERSON {
+    person_id INT [primary key]
+    first_name VARCHAR(50)
+    last_name VARCHAR(50)
+    date_of_birth DATE
+    bank_account VARCHAR(20)
+    national_id VARCHAR(20)
+}
+
+Table COURSE {
+    course_id INT [primary key]
+    course_name VARCHAR(100)
+    course_cost DECIMAL(10, 2)
+    professor_pay DECIMAL(10, 2)
+}
+
+Table STUDENT {
+    person_id INT [primary key, ref: > PERSON.person_id]
+    enrollment_date DATE
+    major VARCHAR(30)
+}
+
+Table PROFESSOR {
+    person_id INT [primary key, ref: > PERSON.person_id]
+    hire_date DATE
+    department VARCHAR(30)
+}
+
+Table STUDENT_COURSE {
+    student_id INT [primary key, ref: > STUDENT.person_id] 
+    course_id INT [primary key, ref: > COURSE.course_id] 
+    signup_date DATE
+}
+
+Table BANK_TRANSFER {
+    transfer_id INT [primary key]
+    person_id INT [ref: > PERSON.person_id]
+    amount DECIMAL(10, 2)
+    transfer_date DATE
+    description VARCHAR(255)
+    outgoing BOOLEAN
+}
+
+Table PROFESSOR_COURSE {
+    professor_id INT [primary key,  ref: > PROFESSOR.person_id]
+    course_id INT [primary key, ref: > COURSE.course_id]
+    weekly_hours INT
+}
