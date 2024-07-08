@@ -98,7 +98,7 @@ BEGIN
         -- Pay the professor if balance is greater than zero
         IF balance > 0 THEN
             INSERT INTO BANK_TRANSFER (person_id, amount, transfer_date, description, outgoing)
-            VALUES (professor_id, balance, CURDATE(), 'Payment for teaching course', 0);
+            VALUES (professor_id, balance, CURDATE(), 'Payment for teaching course', 1);
         END IF;
     END LOOP;
 
