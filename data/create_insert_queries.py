@@ -39,42 +39,47 @@ sqls = list()
 
 # Generate and print SQL statements for STUDENT table
 student_ids = random.sample(person_ids, int(LEN_LISTS * STUDENTS_PRECENTAGE))
+studnt_insert_query = "INSERT INTO STUDENT (person_id, enrollment_date, major) VALUES \n"
 for student_id in student_ids:
     enrollment_date = fake.date_between(start_date='-4y', end_date='today')
     major = random.choice(majors)
-    sql = f"""INSERT INTO STUDENT (person_id, enrollment_date, major) VALUES ({student_id}, '{enrollment_date}', '{major}');"""
-    print(sql)
-    sqls.append(sql)
+    studnt_insert_query += f"""({student_id}, '{enrollment_date}', '{major}')\n"""
+studnt_insert_query += '\n'
+sqls.append(studnt_insert_query)
 
 # Generate and print SQL statements for PROFESSOR table
 professor_ids = [pid for pid in person_ids if pid not in student_ids]
+professor_insert_query = "INSERT INTO PROFESSOR (person_id, hire_date, department) VALUES\n"
 for professor_id in professor_ids:
     hire_date = fake.date_between(start_date='-10y', end_date='today')
     department = random.choice(departments)
-    sql = f"""INSERT INTO PROFESSOR (person_id, hire_date, department) VALUES ({professor_id}, '{hire_date}', '{department}');"""
-    print(sql)
-    sqls.append(sql)
+    professor_insert_query += f"({professor_id}, '{hire_date}', '{department}')\n"
+professor_insert_query += '\n'
+sqls.append(professor_insert_query)
 
 
 # Generate and print SQL statements for STUDENT_COURSE table
+student_to_course_insert = "INSERT INTO STUDENT_COURSE (student_id, course_id, signup_date) VALUES\n"
 for student_id in student_ids:
     for _ in range(random.randint(1, 5)):  # each student enrolls in 1 to 5 courses
         course_id = random.choice(course_ids)
         signup_date = fake.date_between(start_date='-4y', end_date='today')
-        sql = f""" INSERT INTO STUDENT_COURSE (student_id, course_id, signup_date) VALUES ({student_id}, {course_id}, '{signup_date}');"""
-        print(sql)
-        sqls.append(sql)
+        student_to_course_insert += f"({student_id}, {course_id}, '{signup_date}')\n"
+student_to_course_insert += '\n'
+sqls.append(student_to_course_insert)
 
 
 # Generate and print SQL statements for PROFESSOR_COURSE table
+professor_to_course_insert = "INSERT INTO PROFESSOR_COURSE (professor_id, course_id, weekly_hours) VALUES \n"
 for professor_id in professor_ids:
     for _ in range(random.randint(1, 3)):  # each professor teaches 1 to 3 courses
         course_id = random.choice(course_ids)
-        weekly_hours = random.randint(1, 10)
-        sql = f""" INSERT INTO PROFESSOR_COURSE (professor_id, course_id, weekly_hours) VALUES ({professor_id}, {course_id}, {weekly_hours});"""
-        print(sql)
-        sqls.append(sql)
+        weekly_hours = random.randint(1, 15)
+        professor_to_course_insert += f"({professor_id}, {course_id}, {weekly_hours})\n"
+sqls.append(professor_to_course_insert)
 
 
 with open("sqls_python_output.txt", 'w') as file:
     file.write('\n'.join(sqls))
+
+
