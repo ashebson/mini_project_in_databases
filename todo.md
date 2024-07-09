@@ -6,7 +6,6 @@
 
 # Stage 2
 
-- [ ] Add columns to parameterized queries
 - [ ] Add descriptions to the README
 
 # Stage 3

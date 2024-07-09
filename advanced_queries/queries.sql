@@ -39,7 +39,7 @@ ORDER BY
     total_salary DESC
 LIMIT 10;
 
---the balance of all the students
+-- the balance of all the students
 SELECT 
     s.person_id,
     p.first_name,
