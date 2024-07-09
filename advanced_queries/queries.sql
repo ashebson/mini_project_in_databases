@@ -19,7 +19,7 @@ from COURSE natural join
         limit 10
     ) as course_balances;
 
---the professors with the biggest salaries:
+-- The professors with the biggest salaries:
 SELECT 
     p.person_id,
     p.first_name,
@@ -84,9 +84,8 @@ WHERE
     DATEDIFF(CURRENT_DATE, p.date_of_birth) / 365.25 > 30
     AND bt.transfer_date BETWEEN '2018-01-01' AND '2019-12-31';
 
-
- --delete transfares older than 5 years ago
- DELETE FROM 
+-- Delete transfers older than 5 years ago
+DELETE FROM 
     BANK_TRANSFER
 WHERE 
     transfer_date <= DATE_SUB(CURDATE(), INTERVAL 5 YEAR);
@@ -110,7 +109,7 @@ WHERE
 
 
 
---cut by half all the outgoing transfares to students
+-- cut by half all the outgoing transfares to students
 UPDATE 
     BANK_TRANSFER
 SET 
@@ -126,7 +125,7 @@ WHERE
 
 
 
---set the major Information Technology to Data Science
+-- set the major Information Technology to Data Science
 UPDATE 
     STUDENT
 SET 
