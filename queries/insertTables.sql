@@ -812,6 +812,8 @@ VALUES
     (396, 'Advanced Telekinesis', 99.9, 87.93),
     (397, 'Memory Charms', 151.54, 84.68),
     (398, 'Memory Restoration Spells', 98.42, 63.82);
+    (399, 'Memory Charms II', 151.54, 84.68),
+    (400, 'Memory Restoration Spells II', 98.42, 63.82);
 
 /*markdown
 # Insert `STUDENT`
