@@ -54,6 +54,7 @@ BEGIN
     DECLARE professor_pay DECIMAL(10, 2);
     DECLARE total_pay DECIMAL(10, 2);
     DECLARE paid_amount DECIMAL(10, 2);
+    DECLARE recieved_amount DECIMAL(10, 2);
     DECLARE balance DECIMAL(10, 2);
     -- Declare a cursor to select all professors
     DECLARE professor_cursor CURSOR FOR
@@ -77,9 +78,17 @@ BEGIN
         SELECT COALESCE(SUM(amount), 0)
         INTO paid_amount
         FROM BANK_TRANSFER
-        WHERE person_id = professor_id;
+        WHERE person_id = professor_id
+        AND outgoing = 1;
+        
+        SELECT COALESCE(SUM(amount), 0)
+        INTO recieved_amount
+        FROM BANK_TRANSFER
+        WHERE person_id = professor_id
+        AND outgoing = 0;
+        
         -- Calculate balance
-        SET balance = total_pay - paid_amount;
+        SET balance = total_pay + recieved_amount - paid_amount;
         -- Pay the professor if balance is greater than zero
         IF balance > 0 THEN
             INSERT INTO BANK_TRANSFER (person_id, amount, transfer_date, description, outgoing)
@@ -94,8 +103,10 @@ END
 # Run Queries
 */
 
-SELECT PERSON_ID, calculate_stddev_person_transfers(PERSON_ID) FROM PERSON
+SELECT PERSON_ID as professor, calculate_mean_transfer(PERSON_ID) as avarage, calculate_stddev_person_transfers(PERSON_ID) as deviation FROM PERSON
+WHERE PERSON_ID IN (SELECT person_id FROM PROFESSOR)
 
 CALL calculate_and_pay_professors();
 
-SELECT PERSON_ID, calculate_stddev_person_transfers(PERSON_ID) FROM PERSON
+SELECT PERSON_ID as professor, calculate_mean_transfer(PERSON_ID) as avarage, calculate_stddev_person_transfers(PERSON_ID) as deviation FROM PERSON
+WHERE PERSON_ID IN (SELECT person_id FROM PROFESSOR)
