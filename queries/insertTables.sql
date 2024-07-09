@@ -425,7 +425,7 @@ VALUES
     (9, 'Charms and Enchantments I', 65.0, 41.65),
     (10, 'Charms and Enchantments II', 117.86, 53.7),
     (11, 'Magical History', 198.94, 140.25),
-    (12, 'Magical Geography', 158.99, 128.86),
+    (12, 'Magical Geography II', 158.99, 128.86),
     (13, 'Advanced Spell Casting', 77.77, 125.26),
     (14, 'Basic Spell Casting', 93.89, 117.59),
     (15, 'Magical Ethics', 167.69, 36.17),

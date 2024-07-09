@@ -39,7 +39,7 @@ ORDER BY
     total_salary DESC
 LIMIT 10;
 
---the balance of all the students
+-- the balance of all the students
 SELECT 
     s.person_id,
     p.first_name,
@@ -64,7 +64,7 @@ ORDER BY
 
 
 
--- the teachers older than 30 in the  year 2018
+-- the teachers older than 30 in the year 2018
 SELECT 
     bt.transfer_id,
     p.person_id,
