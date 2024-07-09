@@ -10,3 +10,6 @@
 - [ ] Add descriptions to the README
 
 # Stage 3
+
+- [ ] fix stt function
+- [ ] 
