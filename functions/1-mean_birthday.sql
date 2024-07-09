@@ -40,7 +40,7 @@ CREATE PROCEDURE create_birthday_transfers(
 )
 BEGIN
     DECLARE done INT DEFAULT 0;
-    DECLARE person_id INT;
+    DECLARE person_id_val INT;
     -- Declare a cursor to select people with birthdays today
     DECLARE birthday_cursor CURSOR FOR
     SELECT person_id
@@ -52,13 +52,13 @@ BEGIN
     OPEN birthday_cursor;
     -- Loop through all the people with birthdays today
     read_loop: LOOP
-        FETCH birthday_cursor INTO person_id;
+        FETCH birthday_cursor INTO person_id_val;
         IF done THEN
             LEAVE read_loop;
         END IF;
             -- Insert the bank transfer for each person
         INSERT INTO BANK_TRANSFER (person_id, amount, transfer_date, description, outgoing)
-        VALUES (person_id, transfer_amount, CURDATE(), transfer_description, 1);
+        VALUES (person_id_val, transfer_amount, CURDATE(), transfer_description, 1);
     END LOOP;
         -- Close the cursor
     CLOSE birthday_cursor;
@@ -69,7 +69,9 @@ END
 */
 
 SELECT PERSON_ID, calculate_mean_transfer(PERSON_ID) FROM PERSON
+WHERE DATE_FORMAT(date_of_birth, '%m-%d') = DATE_FORMAT(CURDATE(), '%m-%d');
 
 CALL create_birthday_transfers(100.00, 'Birthday Gift');
 
 SELECT PERSON_ID, calculate_mean_transfer(PERSON_ID) FROM PERSON
+WHERE DATE_FORMAT(date_of_birth, '%m-%d') = DATE_FORMAT(CURDATE(), '%m-%d')
