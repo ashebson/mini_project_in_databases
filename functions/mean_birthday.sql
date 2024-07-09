@@ -41,7 +41,6 @@ CREATE PROCEDURE create_birthday_transfers(
 BEGIN
     DECLARE done INT DEFAULT 0;
     DECLARE person_id INT;
-
     -- Declare a cursor to select people with birthdays today
     DECLARE birthday_cursor CURSOR FOR
     SELECT person_id
