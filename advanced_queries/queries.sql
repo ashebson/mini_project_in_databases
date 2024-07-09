@@ -64,7 +64,7 @@ ORDER BY
 
 
 
--- the teachers older than 30 in the  year 2018
+-- the teachers older than 30 in the year 2018
 SELECT 
     bt.transfer_id,
     p.person_id,
