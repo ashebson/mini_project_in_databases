@@ -10,5 +10,8 @@
 
 # Stage 3
 
-- [ ] fix stt function
+# Stage 4
+
+- [ ] write explanation of how we merged the databases
+- [ ] DSD
 - [ ] 
