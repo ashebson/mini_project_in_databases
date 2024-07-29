@@ -1,5 +1,11 @@
 /*markdown
+# Load ExternalDatabase
+*/
+
+/*markdown
+```bash
 mysql ExternalDatabase < backup3.sql
+```
 */
 
 use HogwartzAccounting;
