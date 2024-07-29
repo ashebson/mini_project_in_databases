@@ -358,36 +358,39 @@ ON per.person_id = prof.person_id
 WHERE CONCAT(per.first_name, ' ', per.last_name) = {professor_name}
 ```
 
-שאילתה המחזירה קורסים שמלומדים ע״י מרצים מבוגרים
+שאילתה המחזירה קורסים שמלומדים ע"י מרצים המבוגרים מגיל נתון.
 
 ```sql
-SELECT 
-    c.course_name,
-    c.course_cost * COUNT(sc.student_id) AS total_course_revenue
-FROM 
-    COURSE c
-JOIN 
-    STUDENT_COURSE sc ON c.course_id = sc.course_id
-WHERE 
-    c.course_name = '{course_name}'
-GROUP BY 
-    c.course_name, c.course_cost;
+SELECT
+    c.course_name,
+    CONCAT(per.first_name, ' ', per.last_name) AS professor_name,
+    per.date_of_birth
+FROM
+    COURSE c
+JOIN
+    PROFESSOR_COURSE pc ON c.course_id = pc.course_id
+JOIN
+    PROFESSOR p ON pc.professor_id = p.person_id
+JOIN
+    PERSON per ON p.person_id = per.person_id
+WHERE
+    per.date_of_birth < "{old_cutoff}";
 ```
 
-שאילתה המחזירה את הקורס הכי רווחי (מבחינת הכנסה)
+שאילתה המחזירה את הרווחיות של קורס נתון (מבחינת הכנסה)
 
 ```sql
-SELECT 
-    c.course_name,
-    c.course_cost * COUNT(sc.student_id) AS total_course_revenue
-FROM 
-    COURSE c
-JOIN 
-    STUDENT_COURSE sc ON c.course_id = sc.course_id
-WHERE 
-    c.course_name = '{course_name}'
-GROUP BY 
-    c.course_name, c.course_cost;
+SELECT
+    c.course_name,
+    c.course_cost * COUNT(sc.student_id) AS total_course_revenue
+FROM
+    COURSE c
+JOIN
+    STUDENT_COURSE sc ON c.course_id = sc.course_id
+WHERE
+    c.course_name = '{course_name}'
+GROUP BY
+    c.course_name, c.course_cost;
 ```
 
 
@@ -399,7 +402,7 @@ GROUP BY
 ## פונקציות ופרוצדורות: 
 
 פונקציה שמחשבת את ממוצע ההעברות לבן אדם. 
-הפונקציה מחשבת את ממוצע סכומי ההעברות, פונקציה זו תשמש אותנו לעשות סטטיסטיקות על ההעברת של המשתמש השמשך.
+הפונקציה מחשבת את ממוצע סכומי ההעברות, פונקציה זו תשמש אותנו לעשות סטטיסטיקות על ההעברת של המשתמש בהמשך.
 
 ```sql 
 
@@ -617,3 +620,43 @@ WHERE PERSON_ID IN (SELECT person_id FROM PROFESSOR)
 ```
 
 
+
+# מיזוג טבלאות
+
+## אבחון הפרויקט השני
+
+קיבלנו את הפרוייקט של קבוצה 2, הפרוייקט עוסק במעונות האוניברסיטה.
+לפרוייקט היה עיצוב שונה שדרש חשיבה והתאמות לפרויקט שלנו עליהם נפרט בהמשך.
+### עיצוב
+סירטוט הERD של הפרוייקט נראה כך:
+![[dorms_ERD.png]]
+ניתן להבחין ב8 טבלאות:
+ - ביניין : מיוצג ע"י מספר סידורי 
+ - חדר: מיוצגים ע"י מספר סידורי של הבניין ומספר בתוך הבניין.
+ - אדם: מיוצג ע"י ID, פלאפון, שם, גיל
+	 - עובד: תאריך העסקה
+		 - מנהל: תחום האחריות שהוא מנהל.
+		 - מנקה: משמרת.
+	 - סטודנט: תואר שעושה ותאריך הרשמה ללימודים.
+ - קישור בין עובד לבניין שהוא עובד בו, קשר רבים לרבים.
+
+### טבלאות
+תרשים בDSD נראה כך: 
+![[dorms_DSD.png]]
+אלו התכונות של האישויות והטבלאות:
+## מיזוג טבלאות חופפות - החלטות.
+עיקר האתגר היה לנהל את השילוב של הנתונים בטבלאות החופפות. אדם וסטודנט.
+לשם כך קיבלנו כמה החלטות לגבי עיצוב הפרויקט המשותף:
+ - החלטנו לקחת את שמו של כל אדם ממסד הנתונים שלנו. 
+ - את הנתון של גיל החלטנו להסיר בשל היכולת לחשב אותו לפי תאריך הלידה וצורך בחישוב מחדש כל פעם של הגיל.
+ - את הנתון של מספר טלפון לאדם לקחנו ממסד הנתונים השני.
+ - הוספנו לסטודנט את שתי עמודות המפתח של טבלת החדר (מספר סידורי ובניין) מבסיס הנתונים השני.
+ - הוחלט שסוג האדם (סטודנט, מרצה, מנהל, מנקה) יקבע לפי השיטה הבאה: 
+	 - אדם המוגדר בבסיס הנתונים השני כמנהל או מנקה - יוגדר כך גם בבסיס הנתונים הממוזג.
+	 - לשם כך נמחק אותו אדם אם הוא כבר מופיע כאדם מסוג מסוים בבסיס הנתונים שלנו.
+ - הוחלט לשנות את הDepartment של manager ב Devision בכדי להבדיל בין זה לבין Department של מרצה.
+## תוצר סופי
+### עיצוב![[integration_erd.png]]
+ניתן לראות שיש שלושה סוגי אנשים בפרויקט החדש. 
+### טבלאות
+![[integration_dsd.png]]
