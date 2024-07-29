@@ -629,7 +629,7 @@ WHERE PERSON_ID IN (SELECT person_id FROM PROFESSOR)
 לפרוייקט היה עיצוב שונה שדרש חשיבה והתאמות לפרויקט שלנו עליהם נפרט בהמשך.
 ### עיצוב
 סירטוט הERD של הפרוייקט נראה כך:
-![[dorms_ERD.png]]
+![[level 4/dorms_ERD.png]]
 ניתן להבחין ב8 טבלאות:
  - ביניין : מיוצג ע"י מספר סידורי 
  - חדר: מיוצגים ע"י מספר סידורי של הבניין ומספר בתוך הבניין.
@@ -642,7 +642,7 @@ WHERE PERSON_ID IN (SELECT person_id FROM PROFESSOR)
 
 ### טבלאות
 תרשים בDSD נראה כך: 
-![[dorms_DSD.png]]
+![[level 4/dorms_DSD.png]]
 אלו התכונות של האישויות והטבלאות:
 ## מיזוג טבלאות חופפות - החלטות.
 עיקר האתגר היה לנהל את השילוב של הנתונים בטבלאות החופפות. אדם וסטודנט.
@@ -656,7 +656,9 @@ WHERE PERSON_ID IN (SELECT person_id FROM PROFESSOR)
 	 - לשם כך נמחק אותו אדם אם הוא כבר מופיע כאדם מסוג מסוים בבסיס הנתונים שלנו.
  - הוחלט לשנות את הDepartment של manager ב Devision בכדי להבדיל בין זה לבין Department של מרצה.
 ## תוצר סופי
-### עיצוב![[integration_erd.png]]
+### עיצוב
+![[level 4/integration_erd.png]]
+
 ניתן לראות שיש שלושה סוגי אנשים בפרויקט החדש. 
 ### טבלאות
-![[integration_dsd.png]]
+![[level 4/integration_dsd.png]]
