@@ -1,6 +1,6 @@
-/*markdown
+```
 mysql ExternalDatabase < backup3.sql
-*/
+```
 
 use HogwartzAccounting;
 

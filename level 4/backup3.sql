@@ -1,4 +1,5 @@
-DROP DATABAS
+DROP DATABASE IF EXISTS ExternalDatabase;
+CREATE DATABASE ExternalDatabase;
 USE ExternalDatabase;
 -- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
 --
