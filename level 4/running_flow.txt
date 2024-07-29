@@ -4,8 +4,6 @@ level1 -> insertPersonTable.ipynb
 level1 -> insertTables.sql
 level1 -> alterTables.sql
 level4 -> backup3.sql
-<<<<<<< HEAD:level 4/running_flow.txt
 level4 -> createTables.sql
-=======
->>>>>>> 406a4546894ea1240e091b866ff469006e43415b:level 4/runnig_flow.txt
 level4 -> insertTables.sql
+level4 -> createViews.sql

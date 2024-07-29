@@ -1,6 +1,6 @@
 /*markdown
 ```bash
-mysql ExternalDatabase < backup3.sql
+mysql backup3.sql
 ```
 */
 
