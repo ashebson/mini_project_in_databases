@@ -1,0 +1,127 @@
+Table "PERSON" {
+  "person_id" INT [pk]
+  "first_name" VARCHAR(50)
+  "last_name" VARCHAR(50)
+  "date_of_birth" DATE
+  "PhoneNumber" VARCHAR(20)
+  "bank_account" VARCHAR(20)
+  "national_id" VARCHAR(20)
+}
+
+Table "COURSE" {
+  "course_id" INT [pk]
+  "course_name" VARCHAR(100)
+  "course_cost" DECIMAL(10,2)
+  "professor_pay" DECIMAL(10,2)
+}
+
+Table "STUDENT" {
+  "person_id" INT [pk]
+  "enrollment_date" DATE
+  "major" VARCHAR(30)
+  "RoomID" INT
+  "BuildingID" INT
+}
+
+Table "PROFESSOR" {
+  "person_id" INT [pk]
+  "hire_date" DATE
+  "department" VARCHAR(30)
+}
+
+Table "STUDENT_COURSE" {
+  "student_id" INT
+  "course_id" INT
+  "signup_date" DATE
+
+  Indexes {
+    (student_id, course_id) [pk]
+  }
+}
+
+Table "BANK_TRANSFER" {
+  "transfer_id" INT [pk]
+  "person_id" INT
+  "amount" DECIMAL(10,2)
+  "transfer_date" DATE
+  "description" VARCHAR(255)
+  "outgoing" BOOLEAN
+}
+
+Table "PROFESSOR_COURSE" {
+  "professor_id" INT
+  "course_id" INT
+  "weekly_hours" INT
+
+  Indexes {
+    (professor_id, course_id) [pk]
+  }
+}
+
+Table "BUILDING" {
+  "BuildingID" INT [pk, not null]
+}
+
+Table "MAINTENANCE_WORKER" {
+  "HireDate" DATE [not null]
+  "ID" INT [pk, not null]
+}
+
+Table "ROOM" {
+  "RoomID" INT [not null]
+  "MaxCapacity" INT [not null]
+  "BuildingID" INT [not null]
+
+  Indexes {
+    (RoomID, BuildingID) [pk]
+  }
+}
+
+Table "MANAGER" {
+  "Department" VARCHAR(50) [not null]
+  "ID" INT [pk, not null]
+}
+
+Table "CLEANER" {
+  "Shift" VARCHAR(20) [not null]
+  "ID" INT [pk, not null]
+}
+
+Table "WORKS_IN" {
+  "ID" INT [not null]
+  "BuildingID" INT [not null]
+
+  Indexes {
+    (ID, BuildingID) [pk]
+  }
+}
+
+Ref:"ROOM"."RoomID" < "STUDENT"."RoomID"
+
+Ref:"BUILDING"."BuildingID" < "STUDENT"."BuildingID"
+
+Ref:"PERSON"."person_id" < "STUDENT"."person_id"
+
+Ref:"PERSON"."person_id" < "PROFESSOR"."person_id"
+
+Ref:"STUDENT"."person_id" < "STUDENT_COURSE"."student_id"
+
+Ref:"COURSE"."course_id" < "STUDENT_COURSE"."course_id"
+
+Ref:"PERSON"."person_id" < "BANK_TRANSFER"."person_id"
+
+Ref:"PROFESSOR"."person_id" < "PROFESSOR_COURSE"."professor_id"
+
+Ref:"COURSE"."course_id" < "PROFESSOR_COURSE"."course_id"
+
+Ref:"PERSON"."person_id" < "MAINTENANCE_WORKER"."ID"
+
+Ref:"BUILDING"."BuildingID" < "ROOM"."BuildingID"
+
+Ref:"MAINTENANCE_WORKER"."ID" < "MANAGER"."ID"
+
+Ref:"MAINTENANCE_WORKER"."ID" < "CLEANER"."ID"
+
+Ref:"MAINTENANCE_WORKER"."ID" < "WORKS_IN"."ID"
+
+Ref:"BUILDING"."BuildingID" < "WORKS_IN"."BuildingID"
