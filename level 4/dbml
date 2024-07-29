@@ -78,7 +78,7 @@ Table "ROOM" {
 }
 
 Table "MANAGER" {
-  "Department" VARCHAR(50) [not null]
+  "Devision" VARCHAR(50) [not null]
   "ID" INT [pk, not null]
 }
 
