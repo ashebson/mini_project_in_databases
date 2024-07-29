@@ -34,8 +34,8 @@ CREATE TABLE STUDENT_COURSE (
     student_id INT,
     course_id INT,
     signup_date DATE,
-    FOREIGN KEY (student_id) REFERENCES STUDENT(person_id),
-    FOREIGN KEY (course_id) REFERENCES COURSE(course_id),
+    FOREIGN KEY (student_id) REFERENCES STUDENT(person_id) ON DELETE CASCADE,
+    FOREIGN KEY (course_id) REFERENCES COURSE(course_id) ON DELETE CASCADE,
     PRIMARY KEY (student_id, course_id)
 );
 
@@ -53,7 +53,7 @@ CREATE TABLE PROFESSOR_COURSE (
     professor_id INT,
     course_id INT,
     weekly_hours INT,
-    FOREIGN KEY (professor_id) REFERENCES PROFESSOR(person_id),
-    FOREIGN KEY (course_id) REFERENCES COURSE(course_id),
+    FOREIGN KEY (professor_id) REFERENCES PROFESSOR(person_id) ON DELETE CASCADE,
+    FOREIGN KEY (course_id) REFERENCES COURSE(course_id) ON DELETE CASCADE,
     PRIMARY KEY (professor_id, course_id)
 );
