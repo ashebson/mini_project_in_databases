@@ -657,7 +657,7 @@ WHERE PERSON_ID IN (SELECT person_id FROM PROFESSOR)
  - הוחלט לשנות את הDepartment של manager ב Devision בכדי להבדיל בין זה לבין Department של מרצה.
 ## תוצר סופי
 ### עיצוב
-![[level 4/integration_erd.png]]
+![](integration_erd.png)
 
 ניתן לראות שיש שלושה סוגי אנשים בפרויקט החדש. 
 ### טבלאות
