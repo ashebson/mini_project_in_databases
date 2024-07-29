@@ -1,3 +1,9 @@
+/*markdown
+```bash
+mysql ExternalDatabase < backup3.sql
+```
+*/
+
 use HogwartzAccounting;
 
 /*markdown
@@ -29,10 +35,10 @@ CREATE TABLE ROOM
 
 CREATE TABLE MANAGER
 (
-  Department VARCHAR(50) NOT NULL,
+  Devision VARCHAR(50) NOT NULL,
   ID INT NOT NULL,
   PRIMARY KEY (ID),
-  FOREIGN KEY (ID) REFERENCES Worker(ID)
+  FOREIGN KEY (ID) REFERENCES WORKER(ID)
 );
 
 CREATE TABLE CLEANER
