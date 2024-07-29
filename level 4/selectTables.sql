@@ -1,0 +1,7 @@
+use HogwartzAccounting;
+
+SELECT * FROM BUILDING;
+
+SELECT * FROM ROOM;
+
+SELECT * FROM STUDENT;

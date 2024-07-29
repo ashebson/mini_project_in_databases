@@ -26,7 +26,7 @@ erDiagram
         date EnrollmentDate
         string Major
         int ID PK, FK
-        int RoomID
+        int RoomID FK
         int BuildingID FK
     }
 

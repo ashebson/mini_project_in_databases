@@ -14,4 +14,6 @@
 
 - [ ] write explanation of how we merged the databases
 - [ ] DSD
-- [ ] 
+- [ ] Add views
+- [ ] Add queries on joint table
+- [ ] Add README
