@@ -630,6 +630,7 @@ WHERE PERSON_ID IN (SELECT person_id FROM PROFESSOR)
 ### עיצוב
 סירטוט הERD של הפרוייקט נראה כך:
 ![](level%204/dorms_ERD.png)
+
 ניתן להבחין ב8 טבלאות:
  - ביניין : מיוצג ע"י מספר סידורי 
  - חדר: מיוצגים ע"י מספר סידורי של הבניין ומספר בתוך הבניין.
@@ -642,6 +643,7 @@ WHERE PERSON_ID IN (SELECT person_id FROM PROFESSOR)
 
 ### טבלאות
 תרשים בDSD נראה כך: 
+
 ![](level%204/dorms_DSD.png)
 
 אלו התכונות של האישויות והטבלאות:
