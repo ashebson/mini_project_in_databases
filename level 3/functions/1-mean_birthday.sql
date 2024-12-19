@@ -45,7 +45,8 @@ BEGIN
     DECLARE birthday_cursor CURSOR FOR
     SELECT person_id
     FROM PERSON
-    WHERE DATE_FORMAT(date_of_birth, '%m-%d') = DATE_FORMAT(CURDATE(), '%m-%d');
+    WHERE DATE_FORMAT(date_of_birth, '%m-%d') = DATE_FORMAT(CURDATE(), '06-07');
+    -- WHERE DATE_FORMAT(date_of_birth, '%m-%d') = DATE_FORMAT(CURDATE(), '%m-%d');
     -- Declare a NOT FOUND handler for the cursor
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
     -- Open the cursor
@@ -69,9 +70,15 @@ END
 */
 
 SELECT PERSON_ID, calculate_mean_transfer(PERSON_ID) FROM PERSON
-WHERE DATE_FORMAT(date_of_birth, '%m-%d') = DATE_FORMAT(CURDATE(), '%m-%d');
+WHERE DATE_FORMAT(date_of_birth, '%m-%d') = '06-07';
+
+-- SELECT PERSON_ID, calculate_mean_transfer(PERSON_ID) FROM PERSON
+-- WHERE DATE_FORMAT(date_of_birth, '%m-%d') = DATE_FORMAT(date_of_birth, '%m-%d');
 
 CALL create_birthday_transfers(100.00, 'Birthday Gift');
 
 SELECT PERSON_ID, calculate_mean_transfer(PERSON_ID) FROM PERSON
-WHERE DATE_FORMAT(date_of_birth, '%m-%d') = DATE_FORMAT(CURDATE(), '%m-%d')
+WHERE DATE_FORMAT(date_of_birth, '%m-%d') = '06-07';
+
+-- SELECT PERSON_ID, calculate_mean_transfer(PERSON_ID) FROM PERSON
+-- WHERE DATE_FORMAT(date_of_birth, '%m-%d') = DATE_FORMAT(date_of_birth, '%m-%d');
